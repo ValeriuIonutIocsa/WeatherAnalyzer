@@ -1,0 +1,10 @@
+final String projectPath = file('.').getAbsolutePath()
+final String rootDirPath = file('../../../../').getAbsolutePath()
+gradle.ext.rootDirPath = rootDirPath
+final String[] subProjectsRelativePaths = [
+        '/Projects/Personal/WeatherAnalyzerCli/WeatherAnalyzerCli',
+        '/Utils/Services/http-utils/http-utils'
+]
+
+apply from: rootDirPath + '/common_settings.gradle'
+configureSettings(projectPath, rootDirPath, subProjectsRelativePaths)

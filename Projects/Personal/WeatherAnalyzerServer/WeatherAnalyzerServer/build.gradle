@@ -1,0 +1,15 @@
+ext {
+    projectVersion = '1.0.2'
+    convertToExe = false
+
+    subProjectNames = [
+            ':WeatherAnalyzerCli',
+            ':http-utils'
+    ]
+    compileClassPaths = []
+    compileJarFilePaths = []
+    testCompileClassPaths = []
+    testCompileJarFilePaths = []
+}
+
+apply from: gradle.ext.rootDirPath + '/common_build.gradle'

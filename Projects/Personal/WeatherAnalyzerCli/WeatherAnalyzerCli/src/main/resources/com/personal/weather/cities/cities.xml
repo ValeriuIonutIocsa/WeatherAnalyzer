@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Cities>
+    <City Name="Los Angeles" AccuWeatherName="los-angeles" AccuWeatherLocationKey="347625"/>
+    <City Name="Chicago" AccuWeatherName="chicago" AccuWeatherLocationKey="348308"/>
+    <City Name="New York" AccuWeatherName="new-york" AccuWeatherLocationKey="349727"/>
+    <City Name="Vancouver" AccuWeatherName="vancouver" AccuWeatherLocationKey="53286"/>
+    <City Name="Montreal" AccuWeatherName="montreal" AccuWeatherLocationKey="56186"/>
+    <City Name="Guadalajara" AccuWeatherName="guadalajara" AccuWeatherLocationKey="243735"/>
+    <City Name="Mexico City" AccuWeatherName="mexico-city" AccuWeatherLocationKey="242560"/>
+    <City Name="Rio de Janeiro" AccuWeatherName="rio-de-janeiro" AccuWeatherLocationKey="45449"/>
+    <City Name="Buenos Aires" AccuWeatherName="buenos-aires" AccuWeatherLocationKey="7894"/>
+    <City Name="Cape Town" AccuWeatherName="cape-town" AccuWeatherLocationKey="306633"/>
+    <City Name="Lisbon" AccuWeatherName="lisbon" AccuWeatherLocationKey="274087"/>
+    <City Name="Madrid" AccuWeatherName="madrid" AccuWeatherLocationKey="308526"/>
+    <City Name="London" AccuWeatherName="london" AccuWeatherLocationKey="328328"/>
+    <City Name="Paris" AccuWeatherName="paris" AccuWeatherLocationKey="623"/>
+    <City Name="Rome" AccuWeatherName="rome" AccuWeatherLocationKey="213490"/>
+    <City Name="Regensburg" AccuWeatherName="regensburg" AccuWeatherLocationKey="167556"/>
+    <City Name="Oslo" AccuWeatherName="oslo" AccuWeatherLocationKey="254946"/>
+    <City Name="Stockholm" AccuWeatherName="stockholm" AccuWeatherLocationKey="314929"/>
+    <City Name="Helsinki" AccuWeatherName="helsinki" AccuWeatherLocationKey="133328"/>
+    <City Name="Timisoara" AccuWeatherName="timisoara" AccuWeatherLocationKey="290867"/>
+    <City Name="Bucharest" AccuWeatherName="bucharest" AccuWeatherLocationKey="287430"/>
+    <City Name="Iasi" AccuWeatherName="iasi" AccuWeatherLocationKey="287994"/>
+    <City Name="Chisinau" AccuWeatherName="chisinau" AccuWeatherLocationKey="242405"/>
+    <City Name="Constanta" AccuWeatherName="constanta" AccuWeatherLocationKey="287719"/>
+    <City Name="Athens" AccuWeatherName="athens" AccuWeatherLocationKey="182536"/>
+    <City Name="Katerini" AccuWeatherName="katerini" AccuWeatherLocationKey="185828"/>
+    <City Name="Jerusalem" AccuWeatherName="jerusalem" AccuWeatherLocationKey="213225"/>
+    <City Name="Cairo" AccuWeatherName="cairo" AccuWeatherLocationKey="127164"/>
+    <City Name="Dubai" AccuWeatherName="dubai" AccuWeatherLocationKey="323091"/>
+    <City Name="Moscow" AccuWeatherName="moscow" AccuWeatherLocationKey="294021"/>
+    <City Name="Oymyakon" AccuWeatherName="oymyakon" AccuWeatherLocationKey="571464"/>
+    <City Name="Tehran" AccuWeatherName="tehran" AccuWeatherLocationKey="210841"/>
+    <City Name="Bengaluru" AccuWeatherName="bengaluru" AccuWeatherLocationKey="204108"/>
+    <City Name="Beijing" AccuWeatherName="beijing" AccuWeatherLocationKey="101924"/>
+    <City Name="Hong Kong" AccuWeatherName="hong-kong" AccuWeatherLocationKey="1123655"/>
+    <City Name="Seoul" AccuWeatherName="seoul" AccuWeatherLocationKey="226081"/>
+    <City Name="Busan" AccuWeatherName="busan" AccuWeatherLocationKey="222888"/>
+    <City Name="Tokyo" AccuWeatherName="tokyo" AccuWeatherLocationKey="226396"/>
+    <City Name="Baybay" AccuWeatherName="baybay-city" AccuWeatherLocationKey="263946"/>
+    <City Name="Manila" AccuWeatherName="manila" AccuWeatherLocationKey="264885"/>
+    <City Name="Perth" AccuWeatherName="perth" AccuWeatherLocationKey="26797"/>
+    <City Name="Sidney" AccuWeatherName="sidney" AccuWeatherLocationKey="22889"/>
+    <City Name="Honolulu" AccuWeatherName="honolulu" AccuWeatherLocationKey="348211"/>
+</Cities>

@@ -1,0 +1,20 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="CityTest.testParseAndPrintWeather" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+    <module name="WeatherAnalyzer.test" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.personal.weather.cities.data.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="com.personal.weather.cities.data" />
+    <option name="MAIN_CLASS_NAME" value="com.personal.weather.cities.data.CityTest" />
+    <option name="METHOD_NAME" value="testParseAndPrintWeather" />
+    <option name="TEST_OBJECT" value="method" />
+    <option name="PARAMETERS" value="" />
+    <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

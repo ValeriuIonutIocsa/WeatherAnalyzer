@@ -1,0 +1,16 @@
+ext {
+    mainClass = 'com.personal.weather.AppStartWeatherAnalyzer'
+    projectVersion = '1.0.2'
+    convertToExe = false
+    jarFolderPath = 'C:\\IVI\\Apps\\WeatherAnalyzer'
+
+    subProjectNames = [
+            ':WeatherAnalyzerServer'
+    ]
+    compileClassPaths = []
+    compileJarFilePaths = []
+    testCompileClassPaths = []
+    testCompileJarFilePaths = []
+}
+
+apply from: gradle.ext.rootDirPath + '/common_build.gradle'

@@ -1,0 +1,16 @@
+ext {
+    subProjectNames = [
+            ':io-utils'
+    ]
+    compileClassPaths = [
+            'com.squareup.okhttp3:okhttp:5.0.0-alpha.11',
+            'com.squareup.retrofit2:retrofit:2.7.2',
+            'com.squareup.retrofit2:converter-scalars:2.7.2',
+            'com.squareup.retrofit2:converter-moshi:2.7.2'
+    ]
+    compileJarFilePaths = []
+    testCompileClassPaths = []
+    testCompileJarFilePaths = []
+}
+
+apply from: gradle.ext.rootDirPath + '/common_build.gradle'

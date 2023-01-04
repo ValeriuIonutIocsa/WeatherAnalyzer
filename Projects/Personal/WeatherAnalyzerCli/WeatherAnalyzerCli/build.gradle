@@ -1,0 +1,14 @@
+ext {
+    projectVersion = '1.0.3'
+    convertToExe = false
+
+    subProjectNames = [
+            ':xml-utils'
+    ]
+    compileClassPaths = []
+    compileJarFilePaths = []
+    testCompileClassPaths = []
+    testCompileJarFilePaths = []
+}
+
+apply from: gradle.ext.rootDirPath + '/common_build.gradle'

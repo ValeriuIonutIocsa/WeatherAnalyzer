@@ -15,6 +15,7 @@ public final class HttpUtils {
 	public static <
 			ObjectT> ObjectT executeCall(
 					final Call<ObjectT> call) {
+
 		return executeCall(call, true);
 	}
 

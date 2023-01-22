@@ -2,7 +2,7 @@ ext {
     mainClass = 'com.personal.weather.AppStartWeatherAnalyzer'
     projectVersion = '1.0.2'
     convertToExe = false
-    jarFolderPath = 'C:\\IVI\\Apps\\WeatherAnalyzer'
+    jarFolderPath = 'C:\\IVI\\Apps\\Scripts\\Personal\\WeatherAnalyzer'
 
     subProjectNames = [
             ':WeatherAnalyzerServer'

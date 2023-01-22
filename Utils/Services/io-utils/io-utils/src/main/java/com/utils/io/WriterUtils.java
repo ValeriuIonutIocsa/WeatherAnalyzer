@@ -1,7 +1,10 @@
 package com.utils.io;
 
+import java.io.BufferedWriter;
+import java.io.IOException;
 import java.io.PrintStream;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -13,6 +16,20 @@ import com.utils.log.Logger;
 public final class WriterUtils {
 
 	private WriterUtils() {
+	}
+
+	public static BufferedWriter openBufferedWriter(
+			final String filePathString) throws IOException {
+
+		return openBufferedWriter(filePathString, StandardCharsets.UTF_8);
+	}
+
+	public static BufferedWriter openBufferedWriter(
+			final String filePathString,
+			final Charset charset) throws IOException {
+
+		final Path filePath = Paths.get(filePathString);
+		return Files.newBufferedWriter(filePath, charset);
 	}
 
 	public static boolean byteArrayToFile(

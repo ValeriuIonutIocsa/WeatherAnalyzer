@@ -1,8 +1,8 @@
 <component name="ProjectRunConfigurationManager">
-    <configuration default="false" factoryName="Gradle" folderName="WeatherAnalyzer" name="WeatherAnalyzer [fatJar sourcesJar]" type="GradleRunConfiguration">
+    <configuration default="false" factoryName="Gradle" folderName="logger" name="logger [fatJar sourcesJar]" type="GradleRunConfiguration">
         <ExternalSystemSettings>
             <option name="executionName"/>
-            <option name="externalProjectPath" value="$PROJECT_DIR$/../../WeatherAnalyzer/WeatherAnalyzer"/>
+            <option name="externalProjectPath" value="$PROJECT_DIR$/../../logger/logger"/>
             <option name="externalSystemIdString" value="GRADLE"/>
             <option name="scriptParameters" value=""/>
             <option name="taskDescriptions">

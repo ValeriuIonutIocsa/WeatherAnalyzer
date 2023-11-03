@@ -4,6 +4,7 @@ import java.io.PrintStream;
 
 import org.junit.jupiter.api.Test;
 
+import com.personal.weather.WeatherAnalyzerTestUtils;
 import com.utils.io.PathUtils;
 import com.utils.io.StreamUtils;
 import com.utils.log.Logger;
@@ -22,13 +23,13 @@ class CityTest {
 		final String accuWeatherName = "timisoara";
 		final String accuWeatherLocationKey = "290867";
 
-		final String htmlOutputPathString = PathUtils.computePath(PathUtils.createRootPath(),
-				"tmp", "WeatherAnalyzer", "_debug", cityName + ".html");
+		final String htmlOutputPathString = PathUtils.computePath(
+				WeatherAnalyzerTestUtils.createTestTmpPathString(), "_debug", cityName + ".html");
 		Logger.printNewLine();
 		Logger.printProgress("generating temporary output HTML file:");
 		Logger.printLine(htmlOutputPathString);
 
-		try (final PrintStream printStream = StreamUtils.openPrintStream(htmlOutputPathString)) {
+		try (PrintStream printStream = StreamUtils.openPrintStream(htmlOutputPathString)) {
 
 			final City city = new City(cityName, accuWeatherName, accuWeatherLocationKey);
 			city.parseWeather(printStream);

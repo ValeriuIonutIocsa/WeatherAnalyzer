@@ -23,10 +23,19 @@ public class CachedFile<
 			final ObjectT dataObject) {
 
 		try {
-			this.filePathString = filePathString;
-			size = FileSizeUtils.fileSize(filePathString);
-			lastModifiedTime = IoUtils.computeFileLastModifiedTime(filePathString);
-			this.dataObject = dataObject;
+			if (IoUtils.fileExists(filePathString)) {
+
+				this.filePathString = filePathString;
+				size = FileSizeUtils.fileSize(filePathString);
+				lastModifiedTime = IoUtils.computeFileLastModifiedTime(filePathString);
+				this.dataObject = dataObject;
+
+			} else {
+				this.filePathString = filePathString;
+				size = -1;
+				lastModifiedTime = -1;
+				this.dataObject = dataObject;
+			}
 
 		} catch (final Exception exc) {
 			Logger.printError("failed to cache file:" + System.lineSeparator() + filePathString);
@@ -40,19 +49,19 @@ public class CachedFile<
 
 		boolean cached = false;
 		try {
-			final boolean parseFile;
-			if (filePathString == null) {
-				parseFile = this.filePathString == null;
-			} else {
-				parseFile = filePathString.equals(this.filePathString);
-			}
-			if (parseFile) {
+			if (this.filePathString != null && this.filePathString.equals(filePathString)) {
 
-				final long size = FileSizeUtils.fileSize(filePathString);
-				if (this.size == size) {
+				if (IoUtils.fileExists(filePathString)) {
 
-					final long lastModifiedTime = IoUtils.computeFileLastModifiedTime(filePathString);
-					cached = this.lastModifiedTime == lastModifiedTime;
+					final long size = FileSizeUtils.fileSize(filePathString);
+					if (this.size > 0 && this.size == size) {
+
+						final long lastModifiedTime = IoUtils.computeFileLastModifiedTime(filePathString);
+						cached = this.lastModifiedTime > 0 && this.lastModifiedTime == lastModifiedTime;
+					}
+
+				} else {
+					cached = size == -1 && lastModifiedTime == -1;
 				}
 			}
 

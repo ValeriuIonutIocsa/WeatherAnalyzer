@@ -6,6 +6,7 @@ import com.utils.http.client.okhttp.converters.FactoryConverterFactoryMoshi;
 public class ServiceGeneratorGitHub extends AbstractServiceGenerator {
 
 	public ServiceGeneratorGitHub() {
+
 		super(new FactoryConverterFactoryMoshi());
 	}
 

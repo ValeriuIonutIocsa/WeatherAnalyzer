@@ -36,7 +36,7 @@ final class WeatherAnalyzerServer {
 			Logger.printLine("port: " + port);
 			Logger.printLine("backlog: " + backlog);
 
-			FactoryFolderCreator.getInstance().createDirectories(databaseFolderPathString, true);
+			FactoryFolderCreator.getInstance().createDirectories(databaseFolderPathString, false, true);
 
 			final WeatherAnalyzerCache weatherAnalyzerCache =
 					new WeatherAnalyzerCache(threadCount, databaseFolderPathString);

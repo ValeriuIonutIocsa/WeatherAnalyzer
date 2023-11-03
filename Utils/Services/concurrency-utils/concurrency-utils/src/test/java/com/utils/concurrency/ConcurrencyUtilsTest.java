@@ -39,6 +39,15 @@ class ConcurrencyUtilsTest {
 		}
 
 		final List<Runnable> runnableList = new ArrayList<>();
+		fillRunnableList(runnableList);
+
+		Logger.printProgress("running concurrency utils test");
+		concurrencyUtils.executeMultiThreadedTask(runnableList);
+	}
+
+	private static void fillRunnableList(
+			final List<Runnable> runnableList) {
+
 		final Random random = new Random();
 		for (int i = 0; i < 10; i++) {
 
@@ -61,8 +70,5 @@ class ConcurrencyUtilsTest {
 				}
 			});
 		}
-
-		Logger.printProgress("running concurrency utils test");
-		concurrencyUtils.executeMultiThreadedTask(runnableList);
 	}
 }

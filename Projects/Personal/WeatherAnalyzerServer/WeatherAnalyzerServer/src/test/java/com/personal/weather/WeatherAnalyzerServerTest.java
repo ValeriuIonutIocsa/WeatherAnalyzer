@@ -1,7 +1,5 @@
 package com.personal.weather;
 
-import java.nio.file.Paths;
-
 import org.junit.jupiter.api.Test;
 
 import com.utils.io.PathUtils;
@@ -15,8 +13,8 @@ class WeatherAnalyzerServerTest {
 		final String hostname = "localhost";
 		final int port = 9010;
 		final int backlog = 0;
-		final String databaseFolderPathString = PathUtils.computePath(PathUtils.createRootPath(),
-				"tmp", "WeatherAnalyzer", "database");
+		final String databaseFolderPathString = PathUtils.computePath(
+				WeatherAnalyzerTestUtils.createTestTmpPathString(), "database");
 		WeatherAnalyzerServer.work(threadCount, hostname, port, backlog, databaseFolderPathString);
 	}
 }

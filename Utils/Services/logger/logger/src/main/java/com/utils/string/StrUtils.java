@@ -46,6 +46,52 @@ public final class StrUtils {
 		return yesNoString;
 	}
 
+	/**
+	 * @param n
+	 *            Integer value
+	 * @return empty string if n is null, string value of n otherwise
+	 */
+	@ApiMethod
+	public static String integerToString(
+			final Integer n,
+			final boolean useGrouping) {
+
+		final String str;
+		if (n != null) {
+			if (useGrouping) {
+				str = NumberFormat.getNumberInstance(Locale.US).format(n);
+			} else {
+				str = String.valueOf(n);
+			}
+		} else {
+			str = "";
+		}
+		return str;
+	}
+
+	/**
+	 * @param n
+	 *            Long value
+	 * @return empty string if n is null, string value of n otherwise
+	 */
+	@ApiMethod
+	public static String longToString(
+			final Long n,
+			final boolean useGrouping) {
+
+		final String str;
+		if (n != null) {
+			if (useGrouping) {
+				str = NumberFormat.getNumberInstance(Locale.US).format(n);
+			} else {
+				str = String.valueOf(n);
+			}
+		} else {
+			str = "";
+		}
+		return str;
+	}
+
 	@ApiMethod
 	public static String positiveByteToString(
 			final byte b) {
@@ -140,6 +186,14 @@ public final class StrUtils {
 	}
 
 	@ApiMethod
+	public static String createAddressInterval(
+			final long startAddress,
+			final long endAddress) {
+
+		return StrUtils.createHexString(startAddress) + " - " + StrUtils.createHexString(endAddress);
+	}
+
+	@ApiMethod
 	public static String createHexString(
 			final long value) {
 
@@ -168,12 +222,49 @@ public final class StrUtils {
 	}
 
 	@ApiMethod
+	public static String createPositiveHexString(
+			final long value) {
+
+		final StringBuilder stringBuilder = new StringBuilder();
+		appendPositiveHexString(value, stringBuilder);
+		return stringBuilder.toString();
+	}
+
+	@ApiMethod
+	public static void appendPositiveHexString(
+			final long value,
+			final StringBuilder stringBuilder) {
+
+		if (value >= 0) {
+
+			stringBuilder
+					.append("0x")
+					.append(Long.toHexString(value));
+		}
+	}
+
+	@ApiMethod
+	public static void printPositiveHexString(
+			final long value,
+			final PrintStream printStream) {
+
+		if (value > 0) {
+
+			printStream.print("0x");
+			printStream.print(Long.toHexString(value));
+		}
+	}
+
+	@ApiMethod
 	public static String byteArrayToBinaryString(
 			final byte[] byteArray) {
 
 		final StringBuilder sb = new StringBuilder();
-		for (final byte b : byteArray) {
-			sb.append(unsignedIntToPaddedBinaryString(Byte.toUnsignedInt(b), 8));
+		if (byteArray != null) {
+
+			for (final byte b : byteArray) {
+				sb.append(unsignedIntToPaddedBinaryString(Byte.toUnsignedInt(b), 8));
+			}
 		}
 		return sb.toString();
 	}
@@ -184,12 +275,15 @@ public final class StrUtils {
 			final String separator) {
 
 		final StringBuilder sb = new StringBuilder();
-		for (int i = 0; i < byteArray.length; i++) {
+		if (byteArray != null) {
 
-			final byte b = byteArray[i];
-			sb.append(unsignedIntToPaddedBinaryString(Byte.toUnsignedInt(b), 8));
-			if (i < byteArray.length - 1) {
-				sb.append(separator);
+			for (int i = 0; i < byteArray.length; i++) {
+
+				final byte b = byteArray[i];
+				sb.append(unsignedIntToPaddedBinaryString(Byte.toUnsignedInt(b), 8));
+				if (i < byteArray.length - 1) {
+					sb.append(separator);
+				}
 			}
 		}
 		return sb.toString();
@@ -200,8 +294,11 @@ public final class StrUtils {
 			final byte[] byteArray) {
 
 		final StringBuilder sb = new StringBuilder();
-		for (final byte b : byteArray) {
-			sb.append(unsignedIntToPaddedHexString(Byte.toUnsignedInt(b), 2));
+		if (byteArray != null) {
+
+			for (final byte b : byteArray) {
+				sb.append(unsignedIntToPaddedHexString(Byte.toUnsignedInt(b), 2));
+			}
 		}
 		return sb.toString();
 	}
@@ -212,12 +309,15 @@ public final class StrUtils {
 			final String separator) {
 
 		final StringBuilder sb = new StringBuilder();
-		for (int i = 0; i < byteArray.length; i++) {
+		if (byteArray != null) {
 
-			final byte b = byteArray[i];
-			sb.append(unsignedIntToPaddedHexString(Byte.toUnsignedInt(b), 2));
-			if (i < byteArray.length - 1) {
-				sb.append(separator);
+			for (int i = 0; i < byteArray.length; i++) {
+
+				final byte b = byteArray[i];
+				sb.append(unsignedIntToPaddedHexString(Byte.toUnsignedInt(b), 2));
+				if (i < byteArray.length - 1) {
+					sb.append(separator);
+				}
 			}
 		}
 		return sb.toString();
@@ -405,9 +505,9 @@ public final class StrUtils {
 
 	@ApiMethod
 	public static void printRepeatedString(
-            final String string,
-            final int count,
-            final PrintStream printStream) {
+			final String string,
+			final int count,
+			final PrintStream printStream) {
 
 		for (int i = 0; i < count; i++) {
 			printStream.print(string);
@@ -837,7 +937,7 @@ public final class StrUtils {
 			final String string) {
 
 		final int value;
-		if (StringUtils.startsWith(string, "0x")) {
+		if (StringUtils.startsWithIgnoreCase(string, "0x")) {
 			value = StrUtils.tryParsePositiveIntFromHexString(string);
 		} else {
 			value = StrUtils.tryParsePositiveInt(string);
@@ -900,7 +1000,7 @@ public final class StrUtils {
 			final String string) {
 
 		final long value;
-		if (StringUtils.startsWith(string, "0x")) {
+		if (StringUtils.startsWithIgnoreCase(string, "0x")) {
 			value = StrUtils.tryParsePositiveLongFromHexString(string);
 		} else {
 			value = StrUtils.tryParsePositiveLong(string);

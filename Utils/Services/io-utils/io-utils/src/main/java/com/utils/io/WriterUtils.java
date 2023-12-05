@@ -72,6 +72,7 @@ public final class WriterUtils {
 
 		FactoryFolderCreator.getInstance().createParentDirectories(filePathString, false, true);
 		FactoryReadOnlyFlagClearer.getInstance().clearReadOnlyFlagFile(filePathString, false, true);
+
 		try (PrintStream printStream = StreamUtils.openPrintStream(filePathString, false, charset)) {
 			printStream.print(string);
 		}

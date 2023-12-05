@@ -13,7 +13,7 @@ class ListFileUtilsTest {
 	void testVisitFiles() {
 
 		final String rootDirPathString =
-				PathUtils.computePath(PathUtils.createRootPath(), "tmp", "ProjectAnalyzer", "Outputs");
+				PathUtils.computePath(PathUtils.createRootPath(), "IVI_MISC", "Docs");
 
 		final List<String> dirPathStringList = new ArrayList<>();
 		final List<String> filePathStringList = new ArrayList<>();
@@ -45,7 +45,7 @@ class ListFileUtilsTest {
 	void testVisitFilesRecursively() {
 
 		final String rootDirPathString =
-				PathUtils.computePath(PathUtils.createRootPath(), "tmp", "ProjectAnalyzer", "Outputs");
+				PathUtils.computePath(PathUtils.createRootPath(), "IVI_MISC", "Docs");
 
 		final List<String> dirPathStringList = new ArrayList<>();
 		final List<String> filePathStringList = new ArrayList<>();

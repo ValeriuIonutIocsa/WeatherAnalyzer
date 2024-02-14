@@ -11,7 +11,7 @@ import com.utils.io.PathUtils;
 import com.utils.log.Logger;
 import com.utils.string.StrUtils;
 
-public final class AppStartWeatherAnalyzer {
+final class AppStartWeatherAnalyzer {
 
 	private AppStartWeatherAnalyzer() {
 	}

@@ -21,7 +21,7 @@ class ConcurrencyUtilsTest {
 	void testExecuteMultiThreadedTask() {
 
 		final ConcurrencyUtils concurrencyUtils;
-		final int input = Integer.parseInt("1");
+		final int input = StrUtils.tryParsePositiveInt("1");
 		if (input == 1) {
 			concurrencyUtils = new ConcurrencyUtilsSimpleRegular(16);
 		} else if (input == 2) {

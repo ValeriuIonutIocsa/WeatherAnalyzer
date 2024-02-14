@@ -56,7 +56,7 @@ public final class WriterUtils {
 			final String filePathString) {
 
 		try {
-			tryStringToFile(string, charset, filePathString);
+			stringToFile(string, charset, filePathString);
 
 		} catch (final Exception exc) {
 			Logger.printError("failed to write string to file:" +

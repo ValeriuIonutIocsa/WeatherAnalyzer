@@ -7,7 +7,7 @@ class WeatherAnalyzerCliTest {
 	@Test
 	void testWork() {
 
-		final int threadCount = 12;
+		final int threadCount = 1;
 		WeatherAnalyzerCli.work(threadCount);
 	}
 }

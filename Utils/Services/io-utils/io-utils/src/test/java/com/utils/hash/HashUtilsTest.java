@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import com.utils.log.Logger;
+import com.utils.string.StrUtils;
 
 class HashUtilsTest {
 
@@ -27,7 +28,7 @@ class HashUtilsTest {
 		final String filePathString;
 		final String algorithm;
 		final String expectedHash;
-		final int input = Integer.parseInt("2");
+		final int input = StrUtils.tryParsePositiveInt("2");
 		if (input == 1) {
 
 			filePathString = "D:\\p\\0g\\0a3\\911\\0g0a3_0u0_911\\work\\3R\\t1\\lib\\libt1base.a";

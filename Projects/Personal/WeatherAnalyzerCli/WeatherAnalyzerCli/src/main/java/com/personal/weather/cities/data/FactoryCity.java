@@ -21,6 +21,7 @@ public final class FactoryCity {
 			final String cityName,
 			final String accuWeatherName,
 			final String accuWeatherLocationKey) {
+
 		return new City(cityName, accuWeatherName, accuWeatherLocationKey);
 	}
 }

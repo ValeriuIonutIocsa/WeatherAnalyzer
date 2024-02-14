@@ -206,7 +206,7 @@ public class City {
 			final PrintStream printStream) {
 
 		StrUtils.printLeftPaddedString(String.valueOf(temp), 3, printStream);
-		printStream.print("\u00B0C");
+		printStream.print("°C");
 	}
 
 	public String createCurrentHighTempString() {

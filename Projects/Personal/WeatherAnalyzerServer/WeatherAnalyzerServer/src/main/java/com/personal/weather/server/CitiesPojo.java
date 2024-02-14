@@ -4,11 +4,11 @@ import java.util.List;
 
 import com.utils.string.StrUtils;
 
-class CitiesPojo {
+public class CitiesPojo {
 
 	private final List<CityPojo> cityPojoList;
 
-	CitiesPojo(
+	public CitiesPojo(
 			final List<CityPojo> cityPojoList) {
 
 		this.cityPojoList = cityPojoList;
